@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "auto-dev",
+  "description": "Autonomous development execution protocol for Claude Code and Codex",
+  "owner": {
+    "name": "zeromountain",
+    "url": "https://github.com/zeromountain"
+  },
+  "plugins": [
+    {
+      "name": "auto-dev",
+      "description": "Adds the autonomous-development skill: repository discovery, targeted interviewing, isolated plan workspaces, and an evidence-driven implement/verify/fix loop, driven to a verified completion.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

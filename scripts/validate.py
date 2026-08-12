@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate SKILL.md files under agent-skills/ against the Agent Skills spec
+"""Validate SKILL.md files under skills/ against the Agent Skills spec
 (https://agentskills.io/specification) plus this repo's own conventions.
 
 Checks:
@@ -25,7 +25,7 @@ NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 MAX_SKILL_MD_LINES = 500
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-SKILLS_DIR = Path(__file__).resolve().parent
+SKILLS_DIR = REPO_ROOT / "skills"
 
 
 def parse_frontmatter(text: str):

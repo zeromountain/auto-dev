@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
-# Install agent-skills/* into a target project as symlinks under
+# Manual fallback installer: symlinks skills/* into a target project's
 # .claude/skills/ and .agents/skills/, so both Claude Code and Codex
-# discover the same skill source.
+# discover the same skill source. Prefer the plugin install flow in
+# README.md (`plugin marketplace add` / `plugin add`) when available —
+# this script is for hosts or setups where installing as a plugin isn't
+# an option.
 #
 # Usage:
-#   agent-skills/install.sh <target-repo-path> [--copy]
+#   scripts/install.sh <target-repo-path> [--copy]
 #
 # --copy: copy files instead of symlinking (for filesystems/hosts without
 #         symlink support, e.g. some Windows setups). Updates must then be
 #         re-run manually to propagate.
 set -euo pipefail
 
-SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../skills" && pwd -P)"
 TARGET="${1:-}"
 MODE="link"
 
