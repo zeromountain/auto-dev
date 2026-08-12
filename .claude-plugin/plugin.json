@@ -7,5 +7,6 @@
     "url": "https://github.com/zeromountain"
   },
   "homepage": "https://github.com/zeromountain/auto-dev",
-  "repository": "https://github.com/zeromountain/auto-dev"
+  "repository": "https://github.com/zeromountain/auto-dev",
+  "license": "MIT"
 }
